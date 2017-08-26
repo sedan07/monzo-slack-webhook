@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "claudia": "^2.14.2"
+    "claudia": "^2.14.2",
+    "jasmine": "^2.8.0"
   },
   "dependencies": {
     "claudia-api-builder": "^2.5.1"
