@@ -1,0 +1,9 @@
+version: '2'
+services:
+  test:
+    image: node:6.10-alpine
+    user: node
+    command: sleep 5d
+    volumes:
+      - .:/usr/src/app:rw
+    working_dir: /usr/src/app

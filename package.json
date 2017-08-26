@@ -1,0 +1,17 @@
+{
+  "name": "monzo-slack-webhook",
+  "version": "0.1.0",
+  "description": "A AWS API Gateway powered webhook for the Monzo API",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "claudia": "^2.14.2"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^2.5.1"
+  }
+}
