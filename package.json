@@ -10,7 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "claudia": "^2.14.2",
-    "jasmine": "^2.8.0"
+    "jasmine": "^2.8.0",
+    "nock": "^9.0.14"
   },
   "dependencies": {
     "claudia-api-builder": "^2.5.1"
