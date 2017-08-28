@@ -1,24 +1,25 @@
-var ApiBuilder = require('claudia-api-builder'),
-    eventParser = require('./lib/event-parser'),
-    api = new ApiBuilder(),
-    slackWebhook = require('./lib/slack-webhook'),
-    formatMessage = require('./lib/format-message');
+const ApiBuilder = require('claudia-api-builder');
+const SlackWebhook = require('./lib/slack-webhook');
+const eventParser = require('./lib/event-parser');
+const formatMessage = require('./lib/format-message');
+
+const api = new ApiBuilder();
 
 module.exports = api;
 
-api.post('/', function (request) {
+api.post('/', (request) => {
   if (process.env.SLACK_WEBHOOK === undefined) {
-    throw 'SLACK_WEBHOOK environment var must be set'
+    throw new Error('SLACK_WEBHOOK environment var must be set');
   }
   const webhook = process.env.SLACK_WEBHOOK;
-  const event = eventParser(request.body)
+  const event = eventParser(request.body);
 
-  var slack = new slackWebhook({
-    url: webhook
+  const slack = new SlackWebhook({
+    url: webhook,
   });
 
   const message = formatMessage(event);
 
   return slack.sendMessage(message)
-           .then()
+    .then();
 });
