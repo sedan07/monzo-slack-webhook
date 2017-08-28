@@ -4,7 +4,7 @@
   "description": "A AWS API Gateway powered webhook for the Monzo API",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "author": "",
   "license": "ISC",
