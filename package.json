@@ -4,12 +4,16 @@
   "description": "A AWS API Gateway powered webhook for the Monzo API",
   "main": "main.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "lint": "eslint main.js lib/"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "claudia": "^2.14.2",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0",
     "jasmine": "^2.8.0",
     "nock": "^9.0.14"
   },
